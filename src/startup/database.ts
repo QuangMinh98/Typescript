@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
-import config from './config/config';
 
 export = async function() {
     try {
-        await mongoose.connect(String(config.development.connectionString), {
+        await mongoose.connect("mongodb://localhost/benice", {
             autoReconnect: true,
             useCreateIndex: true,
             bufferMaxEntries: 0,
